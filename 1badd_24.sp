@@ -5,7 +5,7 @@
 * Model include
 .include ../16nm_HP.pm
 
-* source
+* source ============================================
 .param vdd=0.7v
 vcc vcc 0 vdd dc vdd
 
@@ -17,6 +17,9 @@ Vcin cin 0 0 pwl(0,vdd 200n,vdd 200.01n,0)
 *Vbin bin 0 0 pulse 0 vdd 10n 0.1n 0.1n 9.9n  20n
 *Vcin cin 0 0 pulse 0 vdd 5n  0.1n 0.1n 4.9n  10n
 *************************************
+*=====================================================
+
+* netlist ============================================
 * s1u
 *.param s1ut1 s1ut2
 *cs1ut1 s1ut1 0 1f
@@ -60,7 +63,7 @@ ms3d3 sum Cin s3dt2 s3dt2 nmos l=16n w=32n
 
 m1 ssum sum vcc vcc pmos w=32n l=16n
 m2 ssum sum 0 0 nmos w=32n l=16n
-
+*==================================================
 .tran 10p 400n
 
 .measure tran avgpower avg power from=150n to=250n
