@@ -63,24 +63,5 @@ m2 ssum sum 0 0 nmos w=32n l=16n
 
 .tran 10p 400n
 
-*.measure tran Tfall5n
-*+ trig v(cin) td=5n val='vdd/2.0' rise=1
-*+ targ v(sum) td=5n val='vdd/2.0' fall=1
-*.measure tran Trise15n
-*+ trig v(cin) td=15n val='vdd/2.0' rise=1
-*+ targ v(sum) td=15n val='vdd/2.0' rise=1
-*.measure tran Tfall20n
-*+ trig v(cin) td=20n val='vdd/2.0' fall=1
-*+ targ v(sum) td=20n val='vdd/2.0' fall=1
-*.measure tran Trise25n
-*+ trig v(cin) td=25n val='vdd/2.0' rise=1
-*+ targ v(sum) td=25n val='vdd/2.0' rise=1
-*.measure tran Tfall35n
-*+ trig v(cin) td=35n val='vdd/2.0' rise=1
-*+ targ v(sum) td=35n val='vdd/2.0' fall=1
-
-
-
 .measure tran avgpower avg power from=150n to=250n
-*.measure tran avgpower2 avg power from=250n to=350n
 .end
